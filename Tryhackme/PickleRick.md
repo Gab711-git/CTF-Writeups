@@ -95,6 +95,20 @@ I then checked out privileges
 
 ![alt text](../Screenshots/privilege.png)
 
-Discovered www-data has full (ALL : ALL) ALL NOPASSWD privileges. I then inspected the /root directory using elevated privileges to retrieve the final ingredient.
+We then Discovered that 'www-data' has full (ALL : ALL) ALL NOPASSWD privileges. I then inspected the /root directory using elevated privileges to retrieve the final ingredient.
 
+We had to see what files existed inside the /root directory. Since normal users can't open '/root', we ran ls with privileges:
 
+#sudo ls -la /root
+
+Output:
+
+![alt text](../Screenshots/sudo.png)
+
+#sudo less /root/3rd.txt
+
+![alt text](../Screenshots/ingredient3.png)
+
+Output: fleeb juice (The third and last ingredient)
+
+# PickleRick Room Finished!
