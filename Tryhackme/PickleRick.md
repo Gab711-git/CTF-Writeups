@@ -36,7 +36,7 @@ I began the room by enumerating, I performed an nmap scan to identify the servic
 
  We opened the website with firefox browser from the CLI.
 
- firefox http://10.113.184.95
+ #firefox http://10.113.184.95
 
  This gave us some clues on what to do,
 
@@ -47,6 +47,20 @@ I began the room by enumerating, I performed an nmap scan to identify the servic
 
 ![alt text](../Screenshots/username.png)
 
-I enumerated the website's hidden directories, and found the following directories:
+I enumerated the website's hidden directories by using a tool called 'gobuster', and found the following directories:
+
+ #gobuster dir -u http://10.113.184.95 -w /usr/share/wordlists/dirb/common.txt -x php,txt,html
+ This command uses the tool gobuster, on http://10.113.184.95 to bruteforce directories using a wordlist from /usr/share/wordlists/dirb/common.txt and checks every php,txt and html files.
 
 ![alt text](../Screenshots/gobuster.png)
+
+ We opened /robots.txt and found: Wubbalubbadubdub, which I assume the password of Rick?
+ Another thing I found interesting is /login.php, so i navigated there and found a credentials input fields.
+
+ ![alt text](../Screenshots/login.png)
+
+ Username : R1ckRul3s (obtained from index.html's comment field)
+ Password : Wubbalubbadubdub (obtained from /robots.txt)
+
+
+
