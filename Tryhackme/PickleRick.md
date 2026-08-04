@@ -71,10 +71,10 @@ We got inside Rick's computer after exploiting it, and we also got a command lin
 I then ran the command 'ls -la' to find Rick's directories, I then found 'Sup3rS3cretPickl3Ingred.txt', we cant perform the 'cat' command so we used an alternative, which is 'less' command.
 
 #ls -la 
-
-![alt text](image.png)
-
 #less 'Sup3rS3cretPickl3Ingred.txt'
+
+![alt text](../Screenshots/ingredient1.png)
+
 Output: 'mr. meeseek hair' (The first ingredient)
 
 We then enumerated Rick's home directories
@@ -88,3 +88,13 @@ and we found a file called 'second ingredients'
 ![alt text](../Screenshots/ingredient2.png)
 
 Output: 1 jerry tear (The second ingredient)
+
+I then checked out privileges
+
+#sudo -l
+
+![alt text](../Screenshots/privilege.png)
+
+Discovered www-data has full (ALL : ALL) ALL NOPASSWD privileges. I then inspected the /root directory using elevated privileges to retrieve the final ingredient.
+
+
