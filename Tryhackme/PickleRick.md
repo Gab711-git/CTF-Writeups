@@ -43,6 +43,10 @@ I began the room by enumerating, I performed an nmap scan to identify the servic
  -Find 3 'ingredients'
  -Find the Password
 
- I began enumerating index.html more, I discovered the username of Rick in its comments. 
+ I began enumerating index.html more, I then discovered Rick's username from the comments, which is Username : R1ckRul3s. 
 
- 
+![alt text](../Screenshots/username.png)
+
+I enumerated the website's hidden directories, and found the following directories:
+
+![alt text](../Screenshots/gobuster.png)
