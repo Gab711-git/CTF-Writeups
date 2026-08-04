@@ -62,5 +62,29 @@ I enumerated the website's hidden directories by using a tool called 'gobuster',
  Username : R1ckRul3s (obtained from index.html's comment field)
  Password : Wubbalubbadubdub (obtained from /robots.txt)
 
+# Initial Access
 
+![alt text](../Screenshots/cmdpanel.png)
 
+We got inside Rick's computer after exploiting it, and we also got a command line input field, which blocks the 'cat' command, so I used another command instead, which is 'less'.
+
+I then ran the command 'ls -la' to find Rick's directories, I then found 'Sup3rS3cretPickl3Ingred.txt', we cant perform the 'cat' command so we used an alternative, which is 'less' command.
+
+#ls -la 
+
+![alt text](image.png)
+
+#less 'Sup3rS3cretPickl3Ingred.txt'
+Output: 'mr. meeseek hair' (The first ingredient)
+
+We then enumerated Rick's home directories
+
+#ls -la /home/rick
+
+and we found a file called 'second ingredients'
+
+#less "/home/rick/second ingredients"
+
+![alt text](../Screenshots/ingredient2.png)
+
+Output: 1 jerry tear (The second ingredient)
