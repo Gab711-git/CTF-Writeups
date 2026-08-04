@@ -6,3 +6,4 @@ Type: Standalone Walkthrough / Practice CTF Machine (Free & Premium accessible)
 Category: Web Exploitation & Linux Privilege Escalation  
 Estimated Completion Time: 30–60 minutes
 
+![alt text](../Screenshots/picklerickcomplete.png)
