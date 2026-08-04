@@ -27,3 +27,22 @@ I began the room by enumerating, I performed an nmap scan to identify the servic
  Output:
 
 ![alt text](../Screenshots/nmapscan.png)
+
+ We identified the services and ports used by the machine, it is running ssh and http services on ports '80' and '443'. Running on versions OpenSSH 8.2p1 and Apache httpd 2.4.21
+
+ # Checking the website
+
+ ![alt text](../Screenshots/index.png)
+
+ We opened the website with firefox browser from the CLI.
+
+ firefox http://10.113.184.95
+
+ This gave us some clues on what to do,
+
+ -Find 3 'ingredients'
+ -Find the Password
+
+ I began enumerating index.html more, I discovered the username of Rick in its comments. 
+
+ 
